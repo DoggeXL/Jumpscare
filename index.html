@@ -14,10 +14,10 @@
     <div class="col-12">
       <div class="text-center">
         <a id="play-button" onclick="showVideo();">
-          <img src="./button.png" style="margin-top: 15%; width: 150px; height:150px;"/>
+          <img id="image" class="img-fluid" src="./1.jpg"/>
         </a>
         <div id="video" class="embed-responsive embed-responsive-16by9" hidden="true">
-          <video loop="" autoplay="">
+          <video id="videoSRC" loop="">
             <source src="./jeff.mp4" type="video/mp4">
           </video>
         </div>
@@ -33,7 +33,21 @@
     function showVideo() {
       document.querySelector("#play-button").hidden = true;
         document.querySelector("#video").hidden = false;
+        document.querySelector("#videoSRC").play();
+       
     }
+    document.addEventListener("DOMContentLoaded", function() {
+      let currentURL = window.location.href;
+        let url = new URL(currentURL);
+        let i = url.searchParams.get("i");
+        if(i == 1) {
+          document.getElementById("image").src = "./2.jpg";
+        }
+        if(i == 2) {
+          document.getElementById("image").src = "./3.jpg";
+        }
+    })
 </script>
+
 </body>
 </html>
