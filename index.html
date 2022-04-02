@@ -12,16 +12,11 @@
 <div class="container mt-2">
   <div class="row">
     <div class="col-12">
-      <div class="text-center">
-        <a id="play-button" onclick="showVideo();">
-          <img id="image" class="img-fluid" src="./1.jpg"/>
-        </a>
-        <div id="video" class="embed-responsive embed-responsive-16by9" hidden="true">
-          <video id="videoSRC" loop="">
-            <source src="./jeff.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>  
+      <video loop="" autoplay="">
+  <source src="https://web.archive.org/web/20170828000519im_/https://akk.li/video/jeff.mp4" type="video/mp4">
+<embed src="https://web.archive.org/web/20170828000519oe_/https://akk.li/jeff/jeff.swf" width="100%" height="100%">
+
+</video>
     </div>
   </div>
 </div>
@@ -30,23 +25,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script>
-    function showVideo() {
-      document.querySelector("#play-button").hidden = true;
-        document.querySelector("#video").hidden = false;
-        document.querySelector("#videoSRC").play();
-       
-    }
-    document.addEventListener("DOMContentLoaded", function() {
-      let currentURL = window.location.href;
-        let url = new URL(currentURL);
-        let i = url.searchParams.get("i");
-        if(i == 1) {
-          document.getElementById("image").src = "./2.jpg";
-        }
-        if(i == 2) {
-          document.getElementById("image").src = "./3.jpg";
-        }
-    })
+    
 </script>
 
 </body>
